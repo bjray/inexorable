@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B6C479C21B4B8281005502CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C11B4B8281005502CD /* main.m */; };
 		B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C41B4B8281005502CD /* AppDelegate.m */; };
-		B6C479C81B4B8281005502CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C71B4B8281005502CD /* ViewController.m */; };
 		B6C479CB1B4B8281005502CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C479C91B4B8281005502CD /* Main.storyboard */; };
 		B6C479CD1B4B8281005502CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C479CC1B4B8281005502CD /* Images.xcassets */; };
 		B6C479D01B4B8281005502CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C479CE1B4B8281005502CD /* LaunchScreen.xib */; };
@@ -48,6 +47,12 @@
 		B6C47A161B4B83C5005502CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C479F61B4B834E005502CD /* SystemConfiguration.framework */; };
 		B6C47A171B4B83CA005502CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C479F81B4B835B005502CD /* libz.dylib */; };
 		B6C47A181B4B83CF005502CD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C479FA1B4B8364005502CD /* libsqlite3.dylib */; };
+		B6C47A201B4B9226005502CD /* IXCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */; };
+		B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */; };
+		B6C47A231B4B9D8D005502CD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C47A221B4B9D8D005502CD /* Accounts.framework */; };
+		B6C47A251B4B9D94005502CD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C47A241B4B9D94005502CD /* Social.framework */; };
+		B6C47A261B4B9D9B005502CD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C47A241B4B9D94005502CD /* Social.framework */; };
+		B6C47A271B4B9DA1005502CD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C47A221B4B9D8D005502CD /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +71,6 @@
 		B6C479C11B4B8281005502CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C479C31B4B8281005502CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6C479C41B4B8281005502CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B6C479C61B4B8281005502CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B6C479C71B4B8281005502CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B6C479CA1B4B8281005502CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6C479CC1B4B8281005502CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B6C479CF1B4B8281005502CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -91,6 +94,11 @@
 		B6C479FF1B4B838B005502CD /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		B6C47A001B4B838B005502CD /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		B6C47A011B4B838B005502CD /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		B6C47A1D1B4B9048005502CD /* Inexorable-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Inexorable-Prefix.pch"; sourceTree = "<group>"; };
+		B6C47A1E1B4B9226005502CD /* IXCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXCountDownViewController.h; sourceTree = "<group>"; };
+		B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXCountDownViewController.m; sourceTree = "<group>"; };
+		B6C47A221B4B9D8D005502CD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B6C47A241B4B9D94005502CD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C47A251B4B9D94005502CD /* Social.framework in Frameworks */,
+				B6C47A231B4B9D8D005502CD /* Accounts.framework in Frameworks */,
 				B6C479FB1B4B8364005502CD /* libsqlite3.dylib in Frameworks */,
 				B6C479F91B4B835B005502CD /* libz.dylib in Frameworks */,
 				B6C479F71B4B834E005502CD /* SystemConfiguration.framework in Frameworks */,
@@ -122,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C47A271B4B9DA1005502CD /* Accounts.framework in Frameworks */,
+				B6C47A261B4B9D9B005502CD /* Social.framework in Frameworks */,
 				B6C47A181B4B83CF005502CD /* libsqlite3.dylib in Frameworks */,
 				B6C47A171B4B83CA005502CD /* libz.dylib in Frameworks */,
 				B6C47A161B4B83C5005502CD /* SystemConfiguration.framework in Frameworks */,
@@ -169,8 +181,8 @@
 			children = (
 				B6C479C31B4B8281005502CD /* AppDelegate.h */,
 				B6C479C41B4B8281005502CD /* AppDelegate.m */,
-				B6C479C61B4B8281005502CD /* ViewController.h */,
-				B6C479C71B4B8281005502CD /* ViewController.m */,
+				B6C47A1E1B4B9226005502CD /* IXCountDownViewController.h */,
+				B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */,
 				B6C479C91B4B8281005502CD /* Main.storyboard */,
 				B6C479CC1B4B8281005502CD /* Images.xcassets */,
 				B6C479CE1B4B8281005502CD /* LaunchScreen.xib */,
@@ -184,6 +196,7 @@
 			children = (
 				B6C479C01B4B8281005502CD /* Info.plist */,
 				B6C479C11B4B8281005502CD /* main.m */,
+				B6C47A1D1B4B9048005502CD /* Inexorable-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,6 +221,8 @@
 		B6C479E71B4B82F8005502CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6C47A241B4B9D94005502CD /* Social.framework */,
+				B6C47A221B4B9D8D005502CD /* Accounts.framework */,
 				B6C479FC1B4B838B005502CD /* Bolts.framework */,
 				B6C479FD1B4B838B005502CD /* Parse.framework */,
 				B6C479FE1B4B838B005502CD /* ParseCrashReporting.framework */,
@@ -278,6 +293,7 @@
 				TargetAttributes = {
 					B6C479BB1B4B8281005502CD = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = S6MK5JM5SY;
 					};
 					B6C479D41B4B8281005502CD = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -329,9 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C479C81B4B8281005502CD /* ViewController.m in Sources */,
 				B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */,
 				B6C479C21B4B8281005502CD /* main.m in Sources */,
+				B6C47A201B4B9226005502CD /* IXCountDownViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C479DC1B4B8281005502CD /* InexorableTests.m in Sources */,
+				B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +474,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inexorable/Inexorable-Prefix.pch";
 				INFOPLIST_FILE = Inexorable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -471,11 +492,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inexorable/Inexorable-Prefix.pch";
 				INFOPLIST_FILE = Inexorable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
