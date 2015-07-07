@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 
-@interface IXCountDownViewController : UIViewController <PFLogInViewControllerDelegate>
+@interface IXCountDownViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UILabel *topTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countDownLabel;

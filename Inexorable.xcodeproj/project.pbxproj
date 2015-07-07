@@ -157,6 +157,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0180EC1B4C556100B521FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6C479C91B4B8281005502CD /* Main.storyboard */,
+				B6C479CE1B4B8281005502CD /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2F0180ED1B4C556A00B521FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6C47A1E1B4B9226005502CD /* IXCountDownViewController.h */,
+				B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2F0180EE1B4C557100B521FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6C479C31B4B8281005502CD /* AppDelegate.h */,
+				B6C479C41B4B8281005502CD /* AppDelegate.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B6C479B31B4B8281005502CD = {
 			isa = PBXGroup;
 			children = (
@@ -179,13 +206,10 @@
 		B6C479BE1B4B8281005502CD /* Inexorable */ = {
 			isa = PBXGroup;
 			children = (
-				B6C479C31B4B8281005502CD /* AppDelegate.h */,
-				B6C479C41B4B8281005502CD /* AppDelegate.m */,
-				B6C47A1E1B4B9226005502CD /* IXCountDownViewController.h */,
-				B6C47A1F1B4B9226005502CD /* IXCountDownViewController.m */,
-				B6C479C91B4B8281005502CD /* Main.storyboard */,
+				2F0180EE1B4C557100B521FA /* Models */,
+				2F0180ED1B4C556A00B521FA /* Controllers */,
+				2F0180EC1B4C556100B521FA /* Views */,
 				B6C479CC1B4B8281005502CD /* Images.xcassets */,
-				B6C479CE1B4B8281005502CD /* LaunchScreen.xib */,
 				B6C479BF1B4B8281005502CD /* Supporting Files */,
 			);
 			path = Inexorable;
