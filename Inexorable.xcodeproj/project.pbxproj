@@ -13,8 +13,8 @@
 		B695732D1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695732B1B4CE58E0036EF12 /* IXDailyTrackerViewController.m */; };
 		B69573301B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695732F1B4D6D1F0036EF12 /* IXHistoryTableViewController.m */; };
 		B69573311B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695732F1B4D6D1F0036EF12 /* IXHistoryTableViewController.m */; };
-		B69573341B4DC2410036EF12 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* ParseClient.m */; };
-		B69573351B4DC2410036EF12 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* ParseClient.m */; };
+		B69573341B4DC2410036EF12 /* IXParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* IXParseClient.m */; };
+		B69573351B4DC2410036EF12 /* IXParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* IXParseClient.m */; };
 		B6C479C21B4B8281005502CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C11B4B8281005502CD /* main.m */; };
 		B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C41B4B8281005502CD /* AppDelegate.m */; };
 		B6C479CB1B4B8281005502CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C479C91B4B8281005502CD /* Main.storyboard */; };
@@ -80,8 +80,8 @@
 		B695732B1B4CE58E0036EF12 /* IXDailyTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXDailyTrackerViewController.m; sourceTree = "<group>"; };
 		B695732E1B4D6D1F0036EF12 /* IXHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXHistoryTableViewController.h; sourceTree = "<group>"; };
 		B695732F1B4D6D1F0036EF12 /* IXHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXHistoryTableViewController.m; sourceTree = "<group>"; };
-		B69573321B4DC2410036EF12 /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
-		B69573331B4DC2410036EF12 /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
+		B69573321B4DC2410036EF12 /* IXParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXParseClient.h; sourceTree = "<group>"; };
+		B69573331B4DC2410036EF12 /* IXParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXParseClient.m; sourceTree = "<group>"; };
 		B6C479BC1B4B8281005502CD /* Inexorable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inexorable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C479C01B4B8281005502CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C479C11B4B8281005502CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 			children = (
 				B6C479C31B4B8281005502CD /* AppDelegate.h */,
 				B6C479C41B4B8281005502CD /* AppDelegate.m */,
-				B69573321B4DC2410036EF12 /* ParseClient.h */,
-				B69573331B4DC2410036EF12 /* ParseClient.m */,
+				B69573321B4DC2410036EF12 /* IXParseClient.h */,
+				B69573331B4DC2410036EF12 /* IXParseClient.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -406,7 +406,7 @@
 				B6C479C21B4B8281005502CD /* main.m in Sources */,
 				B69573301B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */,
 				B695732C1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */,
-				B69573341B4DC2410036EF12 /* ParseClient.m in Sources */,
+				B69573341B4DC2410036EF12 /* IXParseClient.m in Sources */,
 				B6C47A201B4B9226005502CD /* IXCountDownViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +419,7 @@
 				B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */,
 				B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
 				B69573311B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */,
-				B69573351B4DC2410036EF12 /* ParseClient.m in Sources */,
+				B69573351B4DC2410036EF12 /* IXParseClient.m in Sources */,
 				B695732D1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

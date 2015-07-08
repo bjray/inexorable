@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ParseClient : NSObject
-- (NSArray *)fetchQuotes;
+@interface IXParseClient : NSObject
+
++(instancetype)sharedManager;
+- (void)fetchQuotesWithCompletion:(void (^)(id))completion failure:(void (^)(id))failure;
 
 @end

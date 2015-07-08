@@ -8,9 +8,10 @@
 
 #import "IXCountDownViewController.h"
 #import "UIImage+ImageEffects.h"
+#import "IXParseClient.h"
 
 @interface IXCountDownViewController ()
-
+@property (nonatomic, retain) NSArray *quotes;
 @end
 
 @implementation IXCountDownViewController
@@ -19,7 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self updateBackgroundImage];
-
+    
+    [self fetchData];
 //    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 //    self.navigationController.navigationBar.shadowImage = [UIImage new];
 //    self.navigationController.navigationBar.translucent = YES;
@@ -82,6 +84,16 @@
 */
 
 #pragma mark - Helper Methods -
+
+- (void)fetchData {
+    self.quotes = [NSArray array];
+    IXParseClient *client = [IXParseClient sharedManager];
+    [client fetchQuotesWithCompletion:^(NSArray *objects) {
+        NSLog(@"quotes received");
+    } failure:^(NSError *error) {
+        NSLog(@"error received");
+    }];
+}
 
 - (void)updateBackgroundImage {
     self.backgroundImage.image = [self selectRandomImage];
