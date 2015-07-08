@@ -21,4 +21,6 @@
 - (IBAction)didTapHistoryBtn:(id)sender;
 - (IBAction)didTapMsgBtn:(id)sender;
 - (IBAction)didTapGoalBtn:(id)sender;
+
+- (IBAction)didTapBackground:(id)sender;
 @end

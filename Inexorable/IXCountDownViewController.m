@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.backgroundImage.image = [self selectRandomImage];
-    NSLog(@"hello");
+    [self updateBackgroundImage];
     
 }
 
@@ -64,6 +63,10 @@
     NSLog(@"show quotes");
 }
 
+- (IBAction)didTapBackground:(id)sender {
+    [self updateBackgroundImage];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -75,6 +78,10 @@
 */
 
 #pragma mark - Helper Methods -
+
+- (void)updateBackgroundImage {
+    self.backgroundImage.image = [self selectRandomImage];
+}
 
 - (UIImage *)selectRandomImage {
     int r = arc4random_uniform(5);

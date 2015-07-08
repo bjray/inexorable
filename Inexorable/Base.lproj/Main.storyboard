@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -14,11 +15,12 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-Ey-Zew">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS LEFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-0S-pzb">
                                 <rect key="frame" x="16" y="442" width="568" height="88"/>
@@ -32,7 +34,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv9-tg-qF2">
                                 <rect key="frame" x="16" y="28" width="568" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="HfO-Oe-30B"/>
+                                    <constraint firstAttribute="height" constant="38" id="RB8-Qi-QuH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="The Mountain is coming...">
@@ -56,6 +58,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapHistoryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gZV-QU-5ll"/>
+                                    <segue destination="0lI-P9-Me6" kind="show" id="tEk-Yg-lOi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbH-9N-viG">
@@ -70,28 +73,33 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapMsgBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dbf-z5-pH6"/>
+                                    <segue destination="LD8-wR-DOm" kind="show" id="QGP-6r-Tga"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="G0m-3T-gSF"/>
                             <constraint firstItem="PbH-9N-viG" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="MGg-1j-GGi"/>
                             <constraint firstItem="o8E-Ey-Zew" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Mei-Qh-dqO"/>
                             <constraint firstItem="i0a-0S-pzb" firstAttribute="top" secondItem="tdE-Xd-l0Q" secondAttribute="bottom" constant="8" id="b1O-SV-kwM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o8E-Ey-Zew" secondAttribute="trailing" constant="-16" id="eVp-li-8VA"/>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="fP5-ft-NRg"/>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="g3U-45-QtD"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="o8E-Ey-Zew" secondAttribute="bottom" id="gg4-mS-oPA"/>
-                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="i9a-9x-5DL"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PbH-9N-viG" secondAttribute="bottom" constant="20" id="nNF-ON-eA6"/>
                             <constraint firstItem="i0a-0S-pzb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="nur-f5-tA3"/>
-                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="o35-4v-7Bu"/>
                             <constraint firstItem="i0a-0S-pzb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qIf-mL-mRW"/>
                             <constraint firstAttribute="centerX" secondItem="tdE-Xd-l0Q" secondAttribute="centerX" id="tmh-oL-Oap"/>
                             <constraint firstItem="o8E-Ey-Zew" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="uGM-wL-WTe"/>
                             <constraint firstItem="PbH-9N-viG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="udP-sf-gAg"/>
-                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wty-bv-Y83"/>
                             <constraint firstItem="PbH-9N-viG" firstAttribute="top" secondItem="i0a-0S-pzb" secondAttribute="bottom" constant="8" id="xe0-rN-bJN"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ixF-p8-4NQ" appends="YES" id="ITf-Rz-0r6"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="dXW-0k-Uin"/>
                     <connections>
                         <outlet property="backgroundImage" destination="o8E-Ey-Zew" id="JG9-Wq-M4B"/>
                         <outlet property="daysLeftLabel" destination="i0a-0S-pzb" id="i5c-Zg-vm8"/>
@@ -101,8 +109,115 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ixF-p8-4NQ" userLabel="Background Tap Gesture">
+                    <connections>
+                        <action selector="didTapBackground:" destination="vXZ-lx-hvc" id="n87-rm-4gJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="288" y="294"/>
+            <point key="canvasLocation" x="1100" y="294"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="Op0-WW-hWG">
+            <objects>
+                <viewController id="0lI-P9-Me6" customClass="IXHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cso-vM-326"/>
+                        <viewControllerLayoutGuide type="bottom" id="MEs-k5-p7B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iX8-ir-u8j">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If it ain't good, it's too late" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-Xq-SBe">
+                                <rect key="frame" x="16" y="72" width="568" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6oR-Rt-cke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QgB-Xq-SBe" firstAttribute="trailing" secondItem="iX8-ir-u8j" secondAttribute="trailingMargin" id="4VZ-Jl-VZS"/>
+                            <constraint firstItem="QgB-Xq-SBe" firstAttribute="top" secondItem="Cso-vM-326" secondAttribute="bottom" constant="8" id="5nM-jt-2h3"/>
+                            <constraint firstItem="QgB-Xq-SBe" firstAttribute="leading" secondItem="iX8-ir-u8j" secondAttribute="leadingMargin" id="iMR-x9-Zhj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fge-xw-4jN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="413"/>
+        </scene>
+        <!--Daily Tracker View Controller-->
+        <scene sceneID="QqU-5P-Cyj">
+            <objects>
+                <viewController id="LD8-wR-DOm" customClass="IXDailyTrackerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6lW-T0-Fj5"/>
+                        <viewControllerLayoutGuide type="bottom" id="AZn-Ie-zfi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iIv-wj-UFx">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How hard did you work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-Uh-PYK">
+                                <rect key="frame" x="16" y="235" width="568" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="iqr-l5-v8w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xny-Ew-Dut">
+                                <rect key="frame" x="169" y="285" width="262" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="X3v-Gu-Gv7"/>
+                                    <constraint firstAttribute="height" constant="30" id="gb5-si-xEI"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-dy-1fc">
+                                <rect key="frame" x="16" y="323" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8K8-2R-vLd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-jg-nS4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="yJv-Ug-h9U">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ND6-kX-Sna"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MEq-SK-ugM"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ueK-jg-nS4" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" constant="-16" id="0Ii-5S-8LR"/>
+                            <constraint firstItem="mb7-Uh-PYK" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" id="3gM-AE-OnA"/>
+                            <constraint firstItem="Xny-Ew-Dut" firstAttribute="top" secondItem="mb7-Uh-PYK" secondAttribute="bottom" constant="8" id="JfP-lU-2wm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ueK-jg-nS4" secondAttribute="trailing" constant="-16" id="Mto-ph-Bmy"/>
+                            <constraint firstItem="mb7-Uh-PYK" firstAttribute="trailing" secondItem="iIv-wj-UFx" secondAttribute="trailingMargin" id="VIW-kR-JoZ"/>
+                            <constraint firstItem="4ha-dy-1fc" firstAttribute="top" secondItem="Xny-Ew-Dut" secondAttribute="bottom" constant="8" id="ah0-Vv-hNX"/>
+                            <constraint firstAttribute="centerX" secondItem="Xny-Ew-Dut" secondAttribute="centerX" id="ddo-yB-SAv"/>
+                            <constraint firstItem="4ha-dy-1fc" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" id="eIc-Ed-Lh2"/>
+                            <constraint firstItem="ueK-jg-nS4" firstAttribute="top" secondItem="iIv-wj-UFx" secondAttribute="topMargin" id="jkm-wr-Wrr"/>
+                            <constraint firstItem="4ha-dy-1fc" firstAttribute="trailing" secondItem="iIv-wj-UFx" secondAttribute="trailingMargin" id="rYj-rc-u3g"/>
+                            <constraint firstAttribute="centerY" secondItem="Xny-Ew-Dut" secondAttribute="centerY" id="sI5-fT-TdI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-mX-iCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792" y="1132"/>
         </scene>
     </scenes>
 </document>
