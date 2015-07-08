@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B69573241B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */; };
+		B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */; };
 		B6C479C21B4B8281005502CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C11B4B8281005502CD /* main.m */; };
 		B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C41B4B8281005502CD /* AppDelegate.m */; };
 		B6C479CB1B4B8281005502CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C479C91B4B8281005502CD /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B69573221B4CD15B0036EF12 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		B6C479BC1B4B8281005502CD /* Inexorable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inexorable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C479C01B4B8281005502CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C479C11B4B8281005502CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +188,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		B69573211B4CD11B0036EF12 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B69573221B4CD15B0036EF12 /* UIImage+ImageEffects.h */,
+				B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		B6C479B31B4B8281005502CD = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 		B6C479BE1B4B8281005502CD /* Inexorable */ = {
 			isa = PBXGroup;
 			children = (
+				B69573211B4CD11B0036EF12 /* Categories */,
 				2F0180EE1B4C557100B521FA /* Models */,
 				2F0180ED1B4C556A00B521FA /* Controllers */,
 				2F0180EC1B4C556100B521FA /* Views */,
@@ -369,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69573241B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
 				B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */,
 				B6C479C21B4B8281005502CD /* main.m in Sources */,
 				B6C47A201B4B9226005502CD /* IXCountDownViewController.m in Sources */,
@@ -381,6 +396,7 @@
 			files = (
 				B6C479DC1B4B8281005502CD /* InexorableTests.m in Sources */,
 				B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */,
+				B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

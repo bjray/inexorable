@@ -7,7 +7,7 @@
 //
 
 #import "IXCountDownViewController.h"
-
+#import "UIImage+ImageEffects.h"
 
 @interface IXCountDownViewController ()
 
@@ -18,15 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *anImage = [self selectRandomImage];
-    self.backgroundImage.image = anImage;
+    self.backgroundImage.image = [self selectRandomImage];
     NSLog(@"hello");
     
+    
+    self.countDownLabel.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapHistoryLabel:)];
+//    [self.countDownLabel addGestureRecognizer:tapGesture];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    self.countDownLabel.text = [NSString stringWithFormat:@"%ld", [self daysLeft]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +54,17 @@
     }
 }
 
+#pragma mark - User Events - 
+- (void)didTapHistoryLabel:(UITapGestureRecognizer *)tapGesture {
+    NSLog(@"show history");
+}
+- (void)didTapMsgLabel:(UITapGestureRecognizer *)tapGesture {
+    NSLog(@"show messages");
+}
+- (void)didTapGoalLabel:(UITapGestureRecognizer *)tapGesture {
+    NSLog(@"show quotes");
+}
+
 /*
 #pragma mark - Navigation
 
@@ -61,11 +75,17 @@
 }
 */
 
+#pragma mark - Helper Methods -
+
 - (UIImage *)selectRandomImage {
     int r = arc4random_uniform(5);
     NSString *name = [NSString stringWithFormat:@"mtn%d", r];
     NSLog(@"returning image: %@", name);
-    return [UIImage imageNamed:name];
+    UIImage *anImage = [UIImage imageNamed:name];
+    UIColor *tintColor = [UIColor colorWithWhite:0.27 alpha:0.52];
+    anImage = [anImage applyBlurWithRadius:5.0 tintColor:tintColor saturationDeltaFactor:1.0 maskImage:nil];
+    
+    return anImage;
 }
 
 - (void)configureLoginController:(PFLogInViewController *)login {
@@ -81,6 +101,20 @@
     login.logInView.logo = logoView;
     login.logInView.logo.contentMode = UIViewContentModeScaleAspectFit;
     login.logInView.backgroundColor = [UIColor colorWithRed:200.0 green:200.0 blue:200.0 alpha:1.0];
+}
+
+- (NSInteger)daysLeft {
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *startDate = [NSDate date];
+    NSDate *endDate = [f dateFromString:@"2015-07-31"];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitDay
+                                                        fromDate:startDate
+                                                          toDate:endDate
+                                                         options:NSCalendarWrapComponents];
+    return components.day;
 }
 
 

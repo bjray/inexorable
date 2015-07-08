@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +21,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-Ey-Zew">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mountain is coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-LZ-gd7">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mountain is coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-LZ-gd7">
                                 <rect key="frame" x="16" y="28" width="568" height="38"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="gSC-fm-Uws"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
                                 <color key="textColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RG2-bV-QCE" appends="YES" id="Suh-tI-DNA"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS LEFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-0S-pzb">
                                 <rect key="frame" x="16" y="442" width="568" height="88"/>
@@ -39,17 +43,22 @@
                                 <color key="textColor" red="0.95275811464088389" green="0.95275811464088389" blue="0.95275811464088389" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How will you prepare?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-SZ-LPf">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How will you prepare?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-SZ-LPf">
                                 <rect key="frame" x="16" y="538" width="568" height="42"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="ymG-TP-ss6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.95275811464088389" green="0.95275811464088389" blue="0.95275811464088389" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pKk-1X-Z8g" appends="YES" id="7Hm-wk-TSU"/>
+                                </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-QK-CXu">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-QK-CXu">
                                 <rect key="frame" x="150" y="312" width="300" height="122"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="Bdh-oP-C6Z"/>
                                     <constraint firstAttribute="width" constant="300" id="ypZ-hF-dZ0"/>
@@ -57,6 +66,9 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="144"/>
                                 <color key="textColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FrQ-Wu-uCV" appends="YES" id="fsf-Gl-0AM"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,11 +94,26 @@
                         <outlet property="backgroundImage" destination="o8E-Ey-Zew" id="JG9-Wq-M4B"/>
                         <outlet property="countDownLabel" destination="5K4-QK-CXu" id="BHA-k5-I4E"/>
                         <outlet property="daysLeftLabel" destination="i0a-0S-pzb" id="i5c-Zg-vm8"/>
-                        <outlet property="prepareMsgLabel" destination="QVZ-SZ-LPf" id="lZV-2M-Xng"/>
-                        <outlet property="topTitleLabel" destination="eOu-LZ-gd7" id="fsZ-OD-GJJ"/>
+                        <outlet property="goalLabel" destination="eOu-LZ-gd7" id="y32-X1-MfW"/>
+                        <outlet property="msgLabel" destination="QVZ-SZ-LPf" id="M9v-gw-S4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FrQ-Wu-uCV" userLabel="History Tap Gesture">
+                    <connections>
+                        <action selector="didTapHistoryLabel:" destination="vXZ-lx-hvc" id="PXE-vt-eU0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pKk-1X-Z8g" userLabel="Msg Tap Gesture">
+                    <connections>
+                        <action selector="didTapMsgLabel:" destination="vXZ-lx-hvc" id="hBD-5G-FZG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RG2-bV-QCE" userLabel="Goal Tap Gesture">
+                    <connections>
+                        <action selector="didTapGoalLabel:" destination="vXZ-lx-hvc" id="Hxp-2I-O2Z"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="288" y="294"/>
         </scene>

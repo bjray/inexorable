@@ -12,9 +12,13 @@
 
 @interface IXCountDownViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
-@property (weak, nonatomic) IBOutlet UILabel *topTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countDownLabel;
 @property (weak, nonatomic) IBOutlet UILabel *daysLeftLabel;
-@property (weak, nonatomic) IBOutlet UILabel *prepareMsgLabel;
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
 
+
+- (IBAction)didTapHistoryLabel:(UITapGestureRecognizer *)tapGesture;
+- (IBAction)didTapMsgLabel:(UITapGestureRecognizer *)tapGesture;
+- (IBAction)didTapGoalLabel:(UITapGestureRecognizer *)tapGesture;
 @end
