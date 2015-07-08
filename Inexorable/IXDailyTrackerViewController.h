@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface IXDailyTrackerViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UISlider *ratingSlider;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+
+-(IBAction)cancel:(id)sender;
+-(IBAction)save:(id)sender;
+- (IBAction)rateExercise:(id)sender;
 
 @end

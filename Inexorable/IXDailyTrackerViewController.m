@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -33,5 +34,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - User Methods -
+
+- (IBAction)rateExercise:(id)sender {
+    NSUInteger index = (NSUInteger)(self.ratingSlider.value + 0.5);
+    [self.ratingSlider setValue:index animated:NO];
+    
+    self.ratingLabel.text = [NSString stringWithFormat:@"%ld", index];
+}
+
+-(IBAction)cancel:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)save:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end
