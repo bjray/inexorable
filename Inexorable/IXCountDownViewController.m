@@ -21,15 +21,12 @@
     self.backgroundImage.image = [self selectRandomImage];
     NSLog(@"hello");
     
-    
-    self.countDownLabel.userInteractionEnabled = YES;
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapHistoryLabel:)];
-//    [self.countDownLabel addGestureRecognizer:tapGesture];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.countDownLabel.text = [NSString stringWithFormat:@"%ld", [self daysLeft]];
+    NSString *title = [NSString stringWithFormat:@"%ld", [self daysLeft]];
+    [self.historyBtn setTitle:title forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,13 +52,15 @@
 }
 
 #pragma mark - User Events - 
-- (void)didTapHistoryLabel:(UITapGestureRecognizer *)tapGesture {
+- (IBAction)didTapHistoryBtn:(id)sender {
     NSLog(@"show history");
 }
-- (void)didTapMsgLabel:(UITapGestureRecognizer *)tapGesture {
+
+- (IBAction)didTapMsgBtn:(id)sender {
     NSLog(@"show messages");
 }
-- (void)didTapGoalLabel:(UITapGestureRecognizer *)tapGesture {
+
+- (IBAction)didTapGoalBtn:(id)sender {
     NSLog(@"show quotes");
 }
 

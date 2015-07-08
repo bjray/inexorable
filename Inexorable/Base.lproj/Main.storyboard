@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -21,99 +20,87 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-Ey-Zew">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mountain is coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-LZ-gd7">
-                                <rect key="frame" x="16" y="28" width="568" height="38"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="gSC-fm-Uws"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
-                                <color key="textColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="RG2-bV-QCE" appends="YES" id="Suh-tI-DNA"/>
-                                </connections>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS LEFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-0S-pzb">
                                 <rect key="frame" x="16" y="442" width="568" height="88"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Zqm-Uh-ZsM"/>
+                                    <constraint firstAttribute="height" constant="88" id="pvi-zy-UId"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="64"/>
                                 <color key="textColor" red="0.95275811464088389" green="0.95275811464088389" blue="0.95275811464088389" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How will you prepare?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-SZ-LPf">
-                                <rect key="frame" x="16" y="538" width="568" height="42"/>
-                                <gestureRecognizers/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv9-tg-qF2">
+                                <rect key="frame" x="16" y="28" width="568" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="ymG-TP-ss6"/>
+                                    <constraint firstAttribute="height" constant="38" id="HfO-Oe-30B"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
-                                <color key="textColor" red="0.95275811464088389" green="0.95275811464088389" blue="0.95275811464088389" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="The Mountain is coming...">
+                                    <color key="titleColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.48100178542570493" blue="0.46620321845456814" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="pKk-1X-Z8g" appends="YES" id="7Hm-wk-TSU"/>
+                                    <action selector="didTapGoalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9oU-19-Jal"/>
                                 </connections>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-QK-CXu">
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdE-Xd-l0Q">
                                 <rect key="frame" x="150" y="312" width="300" height="122"/>
-                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="Bdh-oP-C6Z"/>
-                                    <constraint firstAttribute="width" constant="300" id="ypZ-hF-dZ0"/>
+                                    <constraint firstAttribute="width" constant="300" id="4ev-iL-rAt"/>
+                                    <constraint firstAttribute="height" constant="122" id="yh4-ic-Hhr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="144"/>
-                                <color key="textColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <state key="normal" title="27">
+                                    <color key="titleColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FrQ-Wu-uCV" appends="YES" id="fsf-Gl-0AM"/>
+                                    <action selector="didTapHistoryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gZV-QU-5ll"/>
                                 </connections>
-                            </label>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbH-9N-viG">
+                                <rect key="frame" x="16" y="538" width="568" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="p5M-g1-NdJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="How will you prepare?">
+                                    <color key="titleColor" red="0.95275811460000004" green="0.95275811460000004" blue="0.95275811460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapMsgBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dbf-z5-pH6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i0a-0S-pzb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3Ja-6y-exJ"/>
-                            <constraint firstItem="QVZ-SZ-LPf" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="8qv-Ju-l1z"/>
-                            <constraint firstItem="QVZ-SZ-LPf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Dms-Fh-M8H"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QVZ-SZ-LPf" secondAttribute="bottom" constant="20" id="FsM-H8-HO4"/>
+                            <constraint firstItem="PbH-9N-viG" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="MGg-1j-GGi"/>
                             <constraint firstItem="o8E-Ey-Zew" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Mei-Qh-dqO"/>
-                            <constraint firstAttribute="centerX" secondItem="5K4-QK-CXu" secondAttribute="centerX" id="RdO-CM-s5Q"/>
-                            <constraint firstItem="QVZ-SZ-LPf" firstAttribute="top" secondItem="i0a-0S-pzb" secondAttribute="bottom" constant="8" id="SHf-Z0-WHK"/>
-                            <constraint firstItem="i0a-0S-pzb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Toi-N8-ulZ"/>
-                            <constraint firstItem="eOu-LZ-gd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Y6c-CP-w5T"/>
+                            <constraint firstItem="i0a-0S-pzb" firstAttribute="top" secondItem="tdE-Xd-l0Q" secondAttribute="bottom" constant="8" id="b1O-SV-kwM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o8E-Ey-Zew" secondAttribute="trailing" constant="-16" id="eVp-li-8VA"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="o8E-Ey-Zew" secondAttribute="bottom" id="gg4-mS-oPA"/>
-                            <constraint firstItem="eOu-LZ-gd7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="hUA-y5-3oy"/>
-                            <constraint firstItem="i0a-0S-pzb" firstAttribute="top" secondItem="5K4-QK-CXu" secondAttribute="bottom" constant="8" id="pgg-bH-Sae"/>
-                            <constraint firstItem="eOu-LZ-gd7" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="s2k-NZ-B6L"/>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="i9a-9x-5DL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PbH-9N-viG" secondAttribute="bottom" constant="20" id="nNF-ON-eA6"/>
+                            <constraint firstItem="i0a-0S-pzb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="nur-f5-tA3"/>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="o35-4v-7Bu"/>
+                            <constraint firstItem="i0a-0S-pzb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qIf-mL-mRW"/>
+                            <constraint firstAttribute="centerX" secondItem="tdE-Xd-l0Q" secondAttribute="centerX" id="tmh-oL-Oap"/>
                             <constraint firstItem="o8E-Ey-Zew" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="uGM-wL-WTe"/>
+                            <constraint firstItem="PbH-9N-viG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="udP-sf-gAg"/>
+                            <constraint firstItem="Yv9-tg-qF2" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wty-bv-Y83"/>
+                            <constraint firstItem="PbH-9N-viG" firstAttribute="top" secondItem="i0a-0S-pzb" secondAttribute="bottom" constant="8" id="xe0-rN-bJN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="o8E-Ey-Zew" id="JG9-Wq-M4B"/>
-                        <outlet property="countDownLabel" destination="5K4-QK-CXu" id="BHA-k5-I4E"/>
                         <outlet property="daysLeftLabel" destination="i0a-0S-pzb" id="i5c-Zg-vm8"/>
-                        <outlet property="goalLabel" destination="eOu-LZ-gd7" id="y32-X1-MfW"/>
-                        <outlet property="msgLabel" destination="QVZ-SZ-LPf" id="M9v-gw-S4E"/>
+                        <outlet property="goalBtn" destination="Yv9-tg-qF2" id="sDr-Qa-lOH"/>
+                        <outlet property="historyBtn" destination="tdE-Xd-l0Q" id="uht-YD-aMB"/>
+                        <outlet property="msgBtn" destination="PbH-9N-viG" id="1Ty-G8-BvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FrQ-Wu-uCV" userLabel="History Tap Gesture">
-                    <connections>
-                        <action selector="didTapHistoryLabel:" destination="vXZ-lx-hvc" id="PXE-vt-eU0"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="pKk-1X-Z8g" userLabel="Msg Tap Gesture">
-                    <connections>
-                        <action selector="didTapMsgLabel:" destination="vXZ-lx-hvc" id="hBD-5G-FZG"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="RG2-bV-QCE" userLabel="Goal Tap Gesture">
-                    <connections>
-                        <action selector="didTapGoalLabel:" destination="vXZ-lx-hvc" id="Hxp-2I-O2Z"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="288" y="294"/>
         </scene>
