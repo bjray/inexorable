@@ -7,7 +7,7 @@
 //
 
 #import "IXParseClient.h"
-#import <Parse/Parse.h>
+
 
 @implementation IXParseClient
 
@@ -30,6 +30,8 @@
     return self;
 }
 
+#pragma mark - Read Methods -
+
 - (void)fetchQuotesWithCompletion:(void (^)(id))completion
                           failure:(void (^)(id))failure {
 
@@ -49,6 +51,41 @@
     
 }
 
+- (void)fetchRatingWithCompletion:(void (^)(id))completion
+                          failure:(void (^)(id))failure {
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Rating"];
+    [query orderByAscending:@"value"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"we found quotes! %@", objects);
+            completion(objects);
+        } else {
+            NSLog(@"Error: %@ %@", [error localizedDescription], [error userInfo]);
+            failure(error);
+        }
+    }];
+    
+}
+
+#pragma mark - Write Methods -
+
+- (void)saveActivityWithDictionary:(NSDictionary *)dict completion:(void (^)())completion failure:(void (^)(id))failure {
+    PFObject *dailyActivity = [PFObject objectWithClassName:@"DailyActivityRating" dictionary:dict];
+    [dailyActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"saved!!!");
+            completion();
+        } else {
+            NSLog(@"error!");
+            failure(error);
+        }
+    }];
+}
+
+
+
+#pragma mark - Helper Methods -
 
 - (void)cachePolicyForQuery:(PFQuery *)aQuery {
     if ([aQuery hasCachedResult]) {

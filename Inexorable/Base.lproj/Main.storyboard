@@ -187,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.70534789364640882" green="0.70534789364640882" blue="0.70534789364640882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mb7-Uh-PYK" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" id="3gM-AE-OnA"/>

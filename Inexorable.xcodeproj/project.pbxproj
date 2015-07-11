@@ -15,6 +15,18 @@
 		B69573311B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695732F1B4D6D1F0036EF12 /* IXHistoryTableViewController.m */; };
 		B69573341B4DC2410036EF12 /* IXParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* IXParseClient.m */; };
 		B69573351B4DC2410036EF12 /* IXParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573331B4DC2410036EF12 /* IXParseClient.m */; };
+		B6B321EE1B50C1B20068AEDF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321ED1B50C1B10068AEDF /* MBProgressHUD.m */; };
+		B6B321EF1B50C1B20068AEDF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321ED1B50C1B10068AEDF /* MBProgressHUD.m */; };
+		B6B321FA1B50C5F80068AEDF /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F51B50C5F80068AEDF /* TSBlurView.m */; };
+		B6B321FB1B50C5F80068AEDF /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F51B50C5F80068AEDF /* TSBlurView.m */; };
+		B6B321FC1B50C5F80068AEDF /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F71B50C5F80068AEDF /* TSMessage.m */; };
+		B6B321FD1B50C5F80068AEDF /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F71B50C5F80068AEDF /* TSMessage.m */; };
+		B6B321FE1B50C5F80068AEDF /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F91B50C5F80068AEDF /* TSMessageView.m */; };
+		B6B321FF1B50C5F80068AEDF /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B321F91B50C5F80068AEDF /* TSMessageView.m */; };
+		B6B322011B50C60B0068AEDF /* AlternativeDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = B6B322001B50C60B0068AEDF /* AlternativeDesign.json */; };
+		B6B322021B50C60B0068AEDF /* AlternativeDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = B6B322001B50C60B0068AEDF /* AlternativeDesign.json */; };
+		B6B322051B50D0D30068AEDF /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B322041B50D0D30068AEDF /* HexColors.m */; };
+		B6B322061B50D0D30068AEDF /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B322041B50D0D30068AEDF /* HexColors.m */; };
 		B6C479C21B4B8281005502CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C11B4B8281005502CD /* main.m */; };
 		B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C479C41B4B8281005502CD /* AppDelegate.m */; };
 		B6C479CB1B4B8281005502CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C479C91B4B8281005502CD /* Main.storyboard */; };
@@ -82,6 +94,17 @@
 		B695732F1B4D6D1F0036EF12 /* IXHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXHistoryTableViewController.m; sourceTree = "<group>"; };
 		B69573321B4DC2410036EF12 /* IXParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXParseClient.h; sourceTree = "<group>"; };
 		B69573331B4DC2410036EF12 /* IXParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXParseClient.m; sourceTree = "<group>"; };
+		B6B321EC1B50C1B10068AEDF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B6B321ED1B50C1B10068AEDF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B6B321F41B50C5F80068AEDF /* TSBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBlurView.h; sourceTree = "<group>"; };
+		B6B321F51B50C5F80068AEDF /* TSBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBlurView.m; sourceTree = "<group>"; };
+		B6B321F61B50C5F80068AEDF /* TSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessage.h; sourceTree = "<group>"; };
+		B6B321F71B50C5F80068AEDF /* TSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessage.m; sourceTree = "<group>"; };
+		B6B321F81B50C5F80068AEDF /* TSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageView.h; sourceTree = "<group>"; };
+		B6B321F91B50C5F80068AEDF /* TSMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageView.m; sourceTree = "<group>"; };
+		B6B322001B50C60B0068AEDF /* AlternativeDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlternativeDesign.json; sourceTree = "<group>"; };
+		B6B322031B50D0D30068AEDF /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		B6B322041B50D0D30068AEDF /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		B6C479BC1B4B8281005502CD /* Inexorable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inexorable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C479C01B4B8281005502CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C479C11B4B8281005502CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -215,9 +238,28 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		B6B321EB1B50C1A20068AEDF /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				B6B322031B50D0D30068AEDF /* HexColors.h */,
+				B6B322041B50D0D30068AEDF /* HexColors.m */,
+				B6B322001B50C60B0068AEDF /* AlternativeDesign.json */,
+				B6B321F41B50C5F80068AEDF /* TSBlurView.h */,
+				B6B321F51B50C5F80068AEDF /* TSBlurView.m */,
+				B6B321F61B50C5F80068AEDF /* TSMessage.h */,
+				B6B321F71B50C5F80068AEDF /* TSMessage.m */,
+				B6B321F81B50C5F80068AEDF /* TSMessageView.h */,
+				B6B321F91B50C5F80068AEDF /* TSMessageView.m */,
+				B6B321EC1B50C1B10068AEDF /* MBProgressHUD.h */,
+				B6B321ED1B50C1B10068AEDF /* MBProgressHUD.m */,
+			);
+			name = "3rd Party";
+			sourceTree = "<group>";
+		};
 		B6C479B31B4B8281005502CD = {
 			isa = PBXGroup;
 			children = (
+				B6B321EB1B50C1A20068AEDF /* 3rd Party */,
 				B6C479BE1B4B8281005502CD /* Inexorable */,
 				B6C479D81B4B8281005502CD /* InexorableTests */,
 				B6C479E71B4B82F8005502CD /* Frameworks */,
@@ -384,6 +426,7 @@
 				B6C479CB1B4B8281005502CD /* Main.storyboard in Resources */,
 				B6C479D01B4B8281005502CD /* LaunchScreen.xib in Resources */,
 				B6C479CD1B4B8281005502CD /* Images.xcassets in Resources */,
+				B6B322011B50C60B0068AEDF /* AlternativeDesign.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B322021B50C60B0068AEDF /* AlternativeDesign.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +445,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B321FC1B50C5F80068AEDF /* TSMessage.m in Sources */,
 				B69573241B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
+				B6B321FA1B50C5F80068AEDF /* TSBlurView.m in Sources */,
 				B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */,
 				B6C479C21B4B8281005502CD /* main.m in Sources */,
+				B6B321FE1B50C5F80068AEDF /* TSMessageView.m in Sources */,
 				B69573301B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */,
 				B695732C1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */,
 				B69573341B4DC2410036EF12 /* IXParseClient.m in Sources */,
+				B6B322051B50D0D30068AEDF /* HexColors.m in Sources */,
 				B6C47A201B4B9226005502CD /* IXCountDownViewController.m in Sources */,
+				B6B321EE1B50C1B20068AEDF /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,9 +467,14 @@
 				B6C479DC1B4B8281005502CD /* InexorableTests.m in Sources */,
 				B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */,
 				B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
+				B6B322061B50D0D30068AEDF /* HexColors.m in Sources */,
+				B6B321FD1B50C5F80068AEDF /* TSMessage.m in Sources */,
 				B69573311B4D6D1F0036EF12 /* IXHistoryTableViewController.m in Sources */,
 				B69573351B4DC2410036EF12 /* IXParseClient.m in Sources */,
 				B695732D1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */,
+				B6B321FB1B50C5F80068AEDF /* TSBlurView.m in Sources */,
+				B6B321EF1B50C1B20068AEDF /* MBProgressHUD.m in Sources */,
+				B6B321FF1B50C5F80068AEDF /* TSMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
