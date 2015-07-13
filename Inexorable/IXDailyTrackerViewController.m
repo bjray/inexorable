@@ -15,6 +15,7 @@
 @interface IXDailyTrackerViewController ()
 @property (nonatomic, retain) NSArray *ratings;
 @property (nonatomic) NSUInteger ratingIndex;
+@property (nonatomic, retain) NSDate *displayDate;
 @end
 
 @implementation IXDailyTrackerViewController
@@ -22,7 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self fetchData];
+    self.displayDate = [NSDate date];
+    self.currentDateBtn.title = [self formattedDateForDate:[NSDate date]];
+//    self.nextDateBtn.enabled = NO;
+    [self fetchRatingsData];
+    [self fetchActivityDate];
+    
 }
 
 
@@ -71,11 +77,49 @@
         [hud hide:YES];
         [self displayError:err optionalMsg:@"Ah shit..."];
     }];
+}
+
+- (IBAction)activityForPreviousDate:(id)sender {
+    self.displayDate = [self.displayDate dateByAddingTimeInterval:-24*60*60];
+    [self checkDateRange];
+    [self updateUI];
+}
+
+- (IBAction)activityForNextDate:(id)sender {
+    NSDate *nextDate = [self.displayDate dateByAddingTimeInterval:24*60*60];
+    NSComparisonResult result = [nextDate compare:[NSDate date]];
+    if (result == NSOrderedAscending) {
+        self.displayDate = nextDate;
+        [self checkDateRange];
+    } else {
+        NSLog(@"this ain't a delorian!");
+    }
+    [self updateUI];
+}
+
+- (IBAction)activityForToday:(id)sender {
+    self.displayDate = [NSDate date];
+    [self updateUI];
+}
+
+- (IBAction)switchChanged:(UISwitch *)sender {
+    BOOL setting = sender.isOn;
+    if (setting) {
+        self.questionLabel.hidden = NO;
+        self.ratingSlider.hidden = NO;
+        self.ratingLabel.hidden = NO;
+    } else {
+        self.questionLabel.hidden = YES;
+        self.ratingSlider.hidden = YES;
+        self.ratingLabel.hidden = YES;
+    }
+    
     
 }
 
+
 #pragma mark - Helper Methods -
-- (void)fetchData {
+- (void)fetchRatingsData {
     self.ratings = [NSArray array];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -92,6 +136,33 @@
         [hud hide:YES];
     }];
 }
+
+- (void)fetchActivityDate {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading...";
+    
+    IXParseClient *client = [IXParseClient sharedManager];
+    [client fetchActivityForDate:self.displayDate user:[PFUser currentUser] withCompletion:^(NSArray *objects) {
+        if ((objects != nil) && (objects.count == 1)) {
+            PFObject *activity = objects[0];
+            self.ratingSlider.value = [activity[@"rating"] floatValue];
+            [self updateUI];
+        }
+        
+        [hud hide:YES];
+    } failure:^(NSError *err) {
+        NSLog(@"error received");
+        [self displayError:err optionalMsg:nil];
+        [hud hide:YES];
+    }];
+}
+
+- (void)fetchAll {
+    
+}
+
+
 
 - (void)displayError:(NSError *)error optionalMsg:(NSString *)optionalMsg{
     NSString *msg = [NSString stringWithFormat:@"%@ %@", [error localizedDescription], optionalMsg];
@@ -113,18 +184,41 @@
     self.ratingIndex = (NSUInteger)(self.ratingSlider.value + 0.5);
     [self.ratingSlider setValue:self.ratingIndex animated:NO];
     self.ratingLabel.text = [self getRatingByValue:self.ratingIndex];
+    self.currentDateBtn.title = [self formattedDateForDate:self.displayDate];
+//    if ([self.displayDate compare:[NSDate date]] == NSOrderedSame) {
+//        self.nextDateBtn.enabled = NO;
+//    } else {
+//        self.nextDateBtn.enabled = YES;
+//    }
 }
 
 
-- (NSString *)formattedDate {
+- (NSString *)formattedDateForDate:(NSDate *)date {
     static NSDateFormatter *formatter;
     if (formatter == nil) {
         formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateStyle:NSDateFormatterMediumStyle];
-        [formatter setTimeStyle:NSDateFormatterShortStyle];
+        formatter.dateFormat = @"MM/dd/yyyy";
     }
     
-    return [formatter stringFromDate:[NSDate date]];
+    return [formatter stringFromDate: date];
+}
+
+-(void)checkDateRange {
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ) fromDate:self.displayDate];
+    [components setHour:-[components hour]];
+    [components setMinute:-[components minute]];
+    [components setSecond:-[components second]];
+    
+    
+    NSDate *startOfDay = [cal dateByAddingComponents:components toDate:self.displayDate options:0];
+    
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    
+    NSDate *endOfDay = [cal dateByAddingComponents:components toDate:startOfDay options:0];
+    NSLog(@"find between days: %@ to %@", startOfDay, endOfDay);
 }
 
 @end

@@ -158,7 +158,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How hard did you work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-Uh-PYK">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How hard was it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-Uh-PYK">
                                 <rect key="frame" x="16" y="235" width="568" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="iqr-l5-v8w"/>
@@ -167,7 +167,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xny-Ew-Dut">
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xny-Ew-Dut">
                                 <rect key="frame" x="169" y="285" width="262" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="X3v-Gu-Gv7"/>
@@ -177,7 +177,7 @@
                                     <action selector="rateExercise:" destination="LD8-wR-DOm" eventType="valueChanged" id="4YH-XA-F19"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-dy-1fc">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-dy-1fc">
                                 <rect key="frame" x="16" y="323" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8K8-2R-vLd"/>
@@ -186,18 +186,66 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-Vm-d7u">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="R1x-XC-KD8"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="left-arrow" id="O5N-ks-BU4">
+                                        <connections>
+                                            <action selector="activityForPreviousDate:" destination="LD8-wR-DOm" id="4LX-Wo-5B1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mn2-nB-6rw"/>
+                                    <barButtonItem title="Item" id="taW-B7-I6Q">
+                                        <connections>
+                                            <action selector="activityForToday:" destination="LD8-wR-DOm" id="OnS-dg-pvn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FQb-Hg-Sqk"/>
+                                    <barButtonItem image="right-arrow" id="qB4-XO-xLH">
+                                        <connections>
+                                            <action selector="activityForNextDate:" destination="LD8-wR-DOm" id="ceL-Jp-qgy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zz-mR-eN1">
+                                <rect key="frame" x="171" y="72" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="VyU-s9-wMi"/>
+                                    <constraint firstAttribute="height" constant="31" id="YQ8-8L-jIA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iCj-Ss-atn">
+                                <rect key="frame" x="319" y="72" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="LD8-wR-DOm" eventType="valueChanged" id="y0G-Bv-8XK"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mb7-Uh-PYK" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" id="3gM-AE-OnA"/>
+                            <constraint firstItem="8zz-mR-eN1" firstAttribute="top" secondItem="6lW-T0-Fj5" secondAttribute="bottom" constant="8" symbolic="YES" id="49Q-iu-gOh"/>
                             <constraint firstItem="Xny-Ew-Dut" firstAttribute="top" secondItem="mb7-Uh-PYK" secondAttribute="bottom" constant="8" id="JfP-lU-2wm"/>
                             <constraint firstItem="mb7-Uh-PYK" firstAttribute="trailing" secondItem="iIv-wj-UFx" secondAttribute="trailingMargin" id="VIW-kR-JoZ"/>
                             <constraint firstItem="4ha-dy-1fc" firstAttribute="top" secondItem="Xny-Ew-Dut" secondAttribute="bottom" constant="8" id="ah0-Vv-hNX"/>
+                            <constraint firstItem="JXF-Vm-d7u" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" constant="-16" id="akA-Ra-m8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JXF-Vm-d7u" secondAttribute="trailing" constant="-16" id="dAb-L7-Ekp"/>
                             <constraint firstAttribute="centerX" secondItem="Xny-Ew-Dut" secondAttribute="centerX" id="ddo-yB-SAv"/>
+                            <constraint firstItem="iCj-Ss-atn" firstAttribute="leading" secondItem="8zz-mR-eN1" secondAttribute="trailing" constant="8" symbolic="YES" id="dk3-dw-6zG"/>
                             <constraint firstItem="4ha-dy-1fc" firstAttribute="leading" secondItem="iIv-wj-UFx" secondAttribute="leadingMargin" id="eIc-Ed-Lh2"/>
+                            <constraint firstItem="iCj-Ss-atn" firstAttribute="top" secondItem="8zz-mR-eN1" secondAttribute="top" id="i5x-ea-nBw"/>
+                            <constraint firstItem="AZn-Ie-zfi" firstAttribute="top" secondItem="JXF-Vm-d7u" secondAttribute="bottom" id="kdW-CU-cRu"/>
                             <constraint firstItem="4ha-dy-1fc" firstAttribute="trailing" secondItem="iIv-wj-UFx" secondAttribute="trailingMargin" id="rYj-rc-u3g"/>
                             <constraint firstAttribute="centerY" secondItem="Xny-Ew-Dut" secondAttribute="centerY" id="sI5-fT-TdI"/>
+                            <constraint firstItem="8zz-mR-eN1" firstAttribute="leading" secondItem="Xny-Ew-Dut" secondAttribute="leading" id="yT3-GA-dPD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="jTV-eF-0ci">
@@ -213,9 +261,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentDateBtn" destination="taW-B7-I6Q" id="xbi-e3-k7Z"/>
+                        <outlet property="didWorkout" destination="iCj-Ss-atn" id="9cG-SU-Pfc"/>
+                        <outlet property="nextDateBtn" destination="qB4-XO-xLH" id="Tif-f6-EgK"/>
+                        <outlet property="previousDateBtn" destination="O5N-ks-BU4" id="w5e-mt-tba"/>
                         <outlet property="questionLabel" destination="mb7-Uh-PYK" id="Qsl-lj-tLj"/>
                         <outlet property="ratingLabel" destination="4ha-dy-1fc" id="iK9-EV-ZQy"/>
                         <outlet property="ratingSlider" destination="Xny-Ew-Dut" id="PIJ-gT-ci6"/>
+                        <outlet property="workoutLabel" destination="8zz-mR-eN1" id="bpg-VV-waS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-mX-iCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,4 +294,8 @@
             <point key="canvasLocation" x="1100" y="294"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left-arrow" width="22" height="22"/>
+        <image name="right-arrow" width="22" height="22"/>
+    </resources>
 </document>
