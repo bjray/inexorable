@@ -7,11 +7,20 @@
 //
 
 #import "IXCountDownViewController.h"
-#import "UIImage+ImageEffects.h"
+#import "IXHistoryTableViewController.h"
+#import "IXDailyTrackerViewController.h"
 #import "IXParseClient.h"
+
+#import "UIImage+ImageEffects.h"
+#import "MBProgressHUD.h"
+#import "TSMessage.h"
 
 @interface IXCountDownViewController ()
 @property (nonatomic, retain) NSArray *quotes;
+@property (nonatomic, retain) NSArray *ratings;
+
+@property (nonatomic)BOOL quotesLoaded;
+@property (nonatomic)BOOL ratingsLoaded;
 @end
 
 @implementation IXCountDownViewController
@@ -20,12 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self updateBackgroundImage];
+    self.quotesLoaded = NO;
+    self.ratingsLoaded = NO;
     
     [self fetchData];
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.shadowImage = [UIImage new];
-//    self.navigationController.navigationBar.translucent = YES;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,15 +80,22 @@
     [self updateBackgroundImage];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"HistorySegue"]) {
+        IXHistoryTableViewController *historyVC = (IXHistoryTableViewController *)[segue destinationViewController];
+        historyVC.ratings = self.ratings;
+    }
+    
+    if ([segue.identifier isEqualToString:@"TrackerSegue"]) {
+        IXDailyTrackerViewController *dailyVC = (IXDailyTrackerViewController *)[segue destinationViewController];
+        dailyVC.ratings = self.ratings;
+    }
 }
-*/
+
 
 #pragma mark - Helper Methods -
 
@@ -89,7 +103,17 @@
     self.quotes = [NSArray array];
     IXParseClient *client = [IXParseClient sharedManager];
     [client fetchQuotesWithCompletion:^(NSArray *objects) {
-        NSLog(@"quotes received");
+        NSLog(@"quotes received: #%ld", objects.count);
+        self.quotes = objects;
+        self.quotesLoaded = YES;
+    } failure:^(NSError *error) {
+        NSLog(@"error received");
+    }];
+    
+    [client fetchRatingWithCompletion:^(NSArray *objects) {
+        NSLog(@"ratings received: #%ld", objects.count);
+        self.ratings = objects;
+        self.ratingsLoaded = YES;
     } failure:^(NSError *error) {
         NSLog(@"error received");
     }];

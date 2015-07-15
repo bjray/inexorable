@@ -13,7 +13,7 @@
 #import <Parse/Parse.h>
 
 @interface IXDailyTrackerViewController ()
-@property (nonatomic, retain) NSArray *ratings;
+
 @property (nonatomic) NSUInteger ratingIndex;
 @property (nonatomic, retain) NSDate *displayDate;
 @end
@@ -25,8 +25,11 @@
     
     self.displayDate = [NSDate date];
     self.currentDateBtn.title = [self formattedDateForDate:[NSDate date]];
-//    self.nextDateBtn.enabled = NO;
-    [self fetchRatingsData];
+    self.ratingSlider.minimumValue = 0.0;
+    self.ratingSlider.maximumValue = self.ratings.count-1;
+    NSLog(@"ratings count: %ld", self.ratings.count);
+    [self updateUI];
+//    [self fetchRatingsData];
     [self fetchActivityDate];
     
 }
@@ -119,23 +122,23 @@
 
 
 #pragma mark - Helper Methods -
-- (void)fetchRatingsData {
-    self.ratings = [NSArray array];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Loading...";
-    
-    IXParseClient *client = [IXParseClient sharedManager];
-    [client fetchRatingWithCompletion:^(NSArray *objects) {
-        self.ratings = objects;
-        [self updateUI];
-        [hud hide:YES];
-    } failure:^(NSError *err) {
-        NSLog(@"error received");
-        [self displayError:err optionalMsg:nil];
-        [hud hide:YES];
-    }];
-}
+//- (void)fetchRatingsData {
+//    self.ratings = [NSArray array];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.mode = MBProgressHUDModeIndeterminate;
+//    hud.labelText = @"Loading...";
+//    
+//    IXParseClient *client = [IXParseClient sharedManager];
+//    [client fetchRatingWithCompletion:^(NSArray *objects) {
+//        self.ratings = objects;
+//        [self updateUI];
+//        [hud hide:YES];
+//    } failure:^(NSError *err) {
+//        NSLog(@"error received");
+//        [self displayError:err optionalMsg:nil];
+//        [hud hide:YES];
+//    }];
+//}
 
 - (void)fetchActivityDate {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -173,8 +176,8 @@
 - (NSString *)getRatingByValue:(NSInteger)value {
     NSString *rating = @"";
     
-    if (self.ratings.count >= value-1) {
-        rating = [self.ratings[value-1] objectForKey:@"description"];
+    if (self.ratings.count >= value) {
+        rating = [self.ratings[value] objectForKey:@"description"];
     }
     
     return rating;

@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface IXHistoryTableViewController : UITableViewController
+@property (nonatomic, retain) NSArray *ratings;
 @end

@@ -22,10 +22,13 @@
 
 -(IBAction)cancel:(id)sender;
 -(IBAction)save:(id)sender;
-- (IBAction)rateExercise:(id)sender;
-- (IBAction)activityForPreviousDate:(id)sender;
-- (IBAction)activityForNextDate:(id)sender;
-- (IBAction)activityForToday:(id)sender;
+-(IBAction)rateExercise:(id)sender;
+-(IBAction)activityForPreviousDate:(id)sender;
+-(IBAction)activityForNextDate:(id)sender;
+-(IBAction)activityForToday:(id)sender;
 
-- (IBAction)switchChanged:(UISwitch *)sender;
+-(IBAction)switchChanged:(UISwitch *)sender;
+
+
+@property (nonatomic, retain) NSArray *ratings;
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B62537041B56958600F0CF71 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B62537031B56958600F0CF71 /* ActivityTableViewCell.m */; };
+		B62537051B56958600F0CF71 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B62537031B56958600F0CF71 /* ActivityTableViewCell.m */; };
 		B69573241B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */; };
 		B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */; };
 		B695732C1B4CE58E0036EF12 /* IXDailyTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695732B1B4CE58E0036EF12 /* IXDailyTrackerViewController.m */; };
@@ -86,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B62537021B56958600F0CF71 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		B62537031B56958600F0CF71 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		B69573221B4CD15B0036EF12 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		B69573231B4CD15B0036EF12 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		B695732A1B4CE58E0036EF12 /* IXDailyTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXDailyTrackerViewController.h; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 			children = (
 				B6C479C91B4B8281005502CD /* Main.storyboard */,
 				B6C479CE1B4B8281005502CD /* LaunchScreen.xib */,
+				B62537021B56958600F0CF71 /* ActivityTableViewCell.h */,
+				B62537031B56958600F0CF71 /* ActivityTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B321FC1B50C5F80068AEDF /* TSMessage.m in Sources */,
+				B62537041B56958600F0CF71 /* ActivityTableViewCell.m in Sources */,
 				B69573241B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
 				B6B321FA1B50C5F80068AEDF /* TSBlurView.m in Sources */,
 				B6C479C51B4B8281005502CD /* AppDelegate.m in Sources */,
@@ -466,6 +473,7 @@
 			files = (
 				B6C479DC1B4B8281005502CD /* InexorableTests.m in Sources */,
 				B6C47A211B4B9226005502CD /* IXCountDownViewController.m in Sources */,
+				B62537051B56958600F0CF71 /* ActivityTableViewCell.m in Sources */,
 				B69573251B4CD15B0036EF12 /* UIImage+ImageEffects.m in Sources */,
 				B6B322061B50D0D30068AEDF /* HexColors.m in Sources */,
 				B6B321FD1B50C5F80068AEDF /* TSMessage.m in Sources */,

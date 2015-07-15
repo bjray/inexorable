@@ -7,6 +7,10 @@
 //
 
 #import "IXHistoryTableViewController.h"
+#import "IXParseClient.h"
+#import "MBProgressHUD.h"
+#import "TSMessage.h"
+#import <Parse/Parse.h>
 
 @interface IXHistoryTableViewController ()
 @property (nonatomic, retain)NSArray *activities;
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self fetchData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -43,15 +47,25 @@
     return self.activities.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    PFObject *activity = [self.activities objectAtIndex:indexPath.row];
+    NSString *desc = activity[@"description"];
+    PFUser *aUser = activity[@"user"];
+    NSLog(@"name: %@", aUser.username);
+//    [aUser fetchIfNeededInBackgroundWithBlock:^(PFObject *aUser, NSError *error) {
+////        NSString *name = aUser.
+//    }];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", aUser.username, desc];
+    if ([aUser.username isEqualToString:@"bray"]) {
+        cell.imageView.image = [UIImage imageNamed:@"b"];
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"j"];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -96,5 +110,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Helper Methods -
+- (void)fetchData {
+    self.activities = [NSArray array];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading...";
+    
+    IXParseClient *client = [IXParseClient sharedManager];
+    [client fetchActivitiesWithCompletion:^(NSArray *objects) {
+        self.activities = objects;
+        [self.tableView reloadData];
+        [hud hide:YES];
+    } failure:^(NSError *err) {
+        NSLog(@"error received");
+        [self displayError:err optionalMsg:nil];
+        [hud hide:YES];
+    }];
+}
+
+- (void)displayError:(NSError *)error optionalMsg:(NSString *)optionalMsg{
+    NSString *msg = [NSString stringWithFormat:@"%@ %@", [error localizedDescription], optionalMsg];
+    
+    [TSMessage showNotificationWithTitle:@"Error" subtitle:msg type:TSMessageNotificationTypeError];
+}
 
 @end
